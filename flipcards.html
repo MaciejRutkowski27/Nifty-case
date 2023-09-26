@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&family=Inter:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Inknut+Antiqua:wght@300&family=Inter:wght@700&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+<style>
+  body {
+    height:100%;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+}
+.readmore {
+text-decoration: underline;
+margin-top: 10px;
+color: #DEA4BF !important;
+}
+/* Container for all flip cards */
+#evcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  column-gap: 5%;
+  flex-wrap: wrap;
+  font-family: 'Inknut Antiqua', serif;
+  row-gap: 40%;
+}
+/* To maintain the layout on larger screens */
+@media only screen and (min-width: 1621px) {
+#evcon {
+column-gap: 9%;
+}
+}
+/* Container for single card */
+.scene {
+  width: 18rem;
+  height: 25rem;
+  font-size: 24px;
+  color: #35355B;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  border-radius: 155px;
+}
+/* Image on the front */
+.cardimg {
+  height: 100%;
+  width: 100%;
+}
+.description {
+  text-align: center;
+margin-bottom: 10%;
+}
+/* Flip the card on click */
+.card.is-flipped {
+  transform: rotateY(-180deg);
+}
+/* Card positioning */
+.card__face {
+  width: 18rem;
+  height: 25rem;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+/* Card front styling */
+.card__face--front {
+  background: #EBCED4;
+  border-radius: 155px;
+}
+/* Card back styling */
+.card__face--back {
+  background: #EBCED4;
+  transform: rotateY(180deg);
+  border-radius: 155px;
+font-size: 20px;
+font-family: 'Barlow', sans-serif;
+line-break:loose;
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+justify-content: center;
+color: #fff;
+background-color: #8B0D58;
+box-sizing: border-box;
+padding: 5%;
+}
+
+</style>
+</head>
+<body>
+<div id="evcon">
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/diyjew.png" alt="jewellery-guide"></div>
+      <div class="card__face card__face--back">
+        If you're passionate about jewelry and want to express your creativity through pearls, chains, 
+          and colors, our jewelry-making course is the perfect opportunity to dive into this art form. <a  class="readmore" href="https://nifty.maciejrutkowski.dk/?p=1142">Read more </a>
+        </div>
+    </div>
+    <h4 class="description">DIY Jewellery</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/recyc.png" alt="upcycling-guide"></div>
+      <div class="card__face card__face--back">
+       Upcycling and recycling give old materials and furniture new value and personal expression, 
+          making the process of reusing and repurposing truly brilliant.
+<a class="readmore" href="https://nifty.maciejrutkowski.dk/?p=1277"> Read more </a> </div>
+    </div>
+    <h4 class="description">Upcycling and recycling</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/visart.png" alt="visual-guide"> <br></div>
+      <div class="card__face card__face--back">
+        Join NIFTY for a variety of cool events, including painting courses that cater to beginners and enthusiasts alike,
+        offering a perfect starting point for your artistic journey.</div>
+    </div>
+    <h4 class="description">Visual arts</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/emboid.png" alt="embroidery-guide"> <br></div>
+        <div class="card__face card__face--back">
+          Embroidery has a unique ability to add a twist to your jeans or personalize your favorite fabric net with beautiful threads, making it truly special.<a class="readmore"
+ href="https://nifty.maciejrutkowski.dk/?p=348">Read more </a></div>
+    </div>
+    <h4 class="description">Embroidery</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/sew.png" alt="sewing-guide"> <br></div>
+      <div class="card__face card__face--back">
+        Our courses provide general guidance on approaching sewing projects, covering essential skills such as measuring, 
+          marking fabric, and achieving your goal of sewing your own clothes.</div>
+    </div>
+    <h4 class="description">Sewing</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/crochet.png" alt="crochet-guide"> <br></div>
+      <div class="card__face card__face--back">
+        NIFTY hosts crochet events for all skill levels, fostering a supportive community of passionate crocheters.</div>
+    </div>
+    <h4 class="description">Crochet</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/ceramics.png" alt="ceramics-guide"> <br></div>
+      <div class="card__face card__face--back">
+        At NIFTY, we encourage the pursuit of ceramics, allowing creativity to unfold through colors, shapes, and expressions.</div>
+    </div>
+    <h4 class="description">Ceramics</h4>
+  </div>
+  <div class="scene scene--card">
+    <div class="card">
+      <div class="card__face card__face--front">
+        <img class="cardimg" src="http://nifty.maciejrutkowski.dk/wp-content/uploads/2023/05/knit.png" alt="knitting-guide"> <br></div>
+      <div class="card__face card__face--back">
+        NIFTY strives to create a welcoming space for both beginner and experienced knitters, fostering connections and shared passion.</div>
+    </div>
+    <h4 class="description">Knitting</h4>
+  </div>
+  </div>
+  <script>
+    //flip cards - work on click
+var cards = document.querySelectorAll('.card');
+[...cards].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
+
+  </script>
+</body>
+</html>

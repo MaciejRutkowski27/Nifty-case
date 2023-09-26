@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  margin: 0;
+}
+/* Container */
+.section {
+  background-color: #599090;
+  display: grid;
+  place-items: center;
+}
+/* SVG image of the logo */
+svg#svglogo {
+  z-index: 100; 
+  display: block;
+  margin:0 auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+/* SVG styling and animation */
+.logoanimation {
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff;
+  stroke-width: 10px;
+  stroke-dasharray: 70000px;
+  stroke-dashoffset: 70000px;
+  animation: type 3s 1 forwards ease-in;
+  height: 600px;
+  width: 600px;
+  z-index: 200;
+}
+/* Animation stages */
+@keyframes type {
+  0% {
+    stroke-dashoffset: 70000px;
+    fill-opacity: 0;
+  }
+  35%{
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    fill-opacity: 1;
+  }
+}
+/* Background bubble */
+.bubble {
+  height: 450px;
+  width: 450px;
+  border-radius:50%;
+  background:linear-gradient(to bottom right, #3E8081, #78649D, 
+  #8B0D58, #393964, #DEA4BF) top right/200% 200%;
+  animation: gradient 7s ease infinite;
+  display: block;
+  margin: 0 auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+/* Gradient animation */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+    transform:rotate(0deg)
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    transform:rotate(360deg)
+	} 
+} 
+    </style>
+</head>
+<body>
+    <section class="section">
+      <div class="bubble"></div>
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="350px" height="350px" id="svglogo"viewBox="0 0 393.000000 390.000000"
+ preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,390.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path class="logoanimation" d="M1800 3889 c-371 -37 -746 -188 -1025 -412 -113 
+-91 -298 -286 -375
+-395 -171 -243 -288 -527 -336 -817 -23 -135 -26 -476 -5 -600 93 -564 396
+-1036 861 -1341 218 -142 437 -230 713 -286 99 -20 141 -23 357 -22 228 0 254
+2 373 27 478 102 861 331 1147 687 442 551 540 1342 249 2013 -228 527 -723
+947 -1287 1092 -202 52 -474 74 -672 54z m485 -74 c111 -19 134 -29 83 -40
+-92 -20 -195 -99 -244 -187 -27 -49 -29 -61 -29 -153 0 -93 2 -105 33 -168 41
+-83 119 -169 226 -248 184 -137 394 -346 504 -502 164 -234 227 -567 162 -852
+-43 -185 -132 -310 -270 -378 -58 -29 -74 -32 -150 -32 -72 1 -93 5 -136 27
+-65 34 -128 105 -151 171 -15 42 -17 74 -14 167 9 240 6 385 -8 435 -45 162
+-163 279 -316 314 -27 6 -107 15 -178 20 -103 8 -138 15 -184 36 -72 32 -91
+50 -114 100 -35 77 -18 166 66 345 29 63 61 139 69 169 21 73 21 231 0 302
+-50 169 -172 305 -306 340 -27 7 -48 16 -48 20 0 10 217 77 320 99 52 10 131
+24 175 29 110 13 389 6 510 -14z m358 -101 c85 -22 261 -111 392 -199 270
+-180 479 -419 628 -716 118 -233 174 -435 199 -712 20 -227 -11 -481 -87 -717
+-169 -524 -573 -959 -1084 -1166 -182 -74 -325 -90 -430 -48 -54 21 -125 101
+-150 169 -28 74 -40 156 -50 340 -8 147 -10 158 -43 227 -43 91 -116 166 -239
+245 -276 178 -304 225 -319 528 -5 94 -14 188 -20 209 -28 94 -103 164 -199
+185 -85 18 -169 -17 -247 -102 -116 -126 -178 -349 -153 -546 24 -194 103
+-332 256 -449 158 -120 231 -224 241 -337 16 -205 -203 -303 -437 -194 -158
+73 -392 317 -541 564 -286 474 -341 1086 -143 1614 118 318 331 611 593 820
+92 74 260 179 313 197 156 52 337 -41 421 -216 77 -160 68 -306 -33 -519 -93
+-197 -110 -305 -61 -401 49 -96 183 -160 338 -160 370 -1 506 -199 450 -651
+-26 -215 46 -374 203 -449 221 -104 489 26 595 289 85 210 90 503 13 741 -36
+109 -104 240 -175 335 -95 126 -327 354 -465 456 -163 122 -229 203 -255 318
+-30 127 31 256 150 318 86 45 227 56 339 27z m-1363 -1729 c87 -46 110 -105
+121 -308 10 -191 20 -249 54 -321 40 -85 97 -140 249 -240 156 -103 225 -169
+263 -253 23 -50 28 -80 39 -243 7 -103 18 -209 25 -236 32 -130 106 -236 192
+-274 66 -30 -2 -41 -244 -41 -223 0 -406 30 -605 97 -78 26 -344 148 -344 158
+0 2 29 4 64 4 94 0 159 25 222 86 94 92 108 212 39 351 -42 86 -96 149 -178
+210 -202 150 -281 297 -281 525 1 325 203 580 384 485z"/>
+</g>
+</svg>     
+</section>
+</body>
+</html>
